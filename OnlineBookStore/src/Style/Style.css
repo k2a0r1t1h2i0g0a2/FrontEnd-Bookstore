@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+
+    font-family:  "Poppins", sans-serif;
+        font-weight: 400;
+}
+.signup {
+    background-image: url(../Images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: flex;
+            align-items: center;
+            justify-content: center; */
+    width: 100vw;
+    height: 100vh;
+    border-radius: 5px;
+    display: flex;flex-direction: column;
+        align-items: center;
+
+}
+
+.head {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.card {
+  
+    margin-left:50px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 50px;
+    box-shadow: 0 0 10px rgba(5, 4, 4, 0.58);
+    padding-bottom: 5px;
+}
+
+.card {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(15px);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+        margin-left: 30px
+    }
+
+}
+
+.title {
+    text-align: center;
+    color: black;
+    font-style: italic;
+    font-weight: bolder;
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+ position: static; 
+    column-gap: 10px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+
+.card-book .card-container .MuiCard-root {
+    transition: transform 0.3s;
+
+}
+
+.card-book .card-container .MuiCard-root:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 4px 8px rgba(244, 241, 241, 0.959);
+
+}
+
+
+
+.total-price {
+    position: fixed;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(214, 47, 47, 0.733);
+    max-height: 25vh;
+}
+
+.cart-body {
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.btn:hover{
+ transform: scale(1.05);
+}
