@@ -167,6 +167,13 @@ const handlePayButtonClick = (bookTotalPrice) => {
       verifyPayment(paymentDetails);
       //   await handleRemoveFromCart(bookId);
       // fetchCart();
+
+       cart.forEach((cartItem) => {
+         cartItem.items.forEach((item) => {
+           handleRemoveFromCart(item.bookId._id);
+         });
+       });
+        fetchCart();
     } catch (error) {
         console.error("Error handling payment success:", error);
     }
