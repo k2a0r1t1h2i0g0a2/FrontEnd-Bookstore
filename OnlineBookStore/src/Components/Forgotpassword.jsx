@@ -45,7 +45,7 @@ const navigate = useNavigate()
     try {
       console.log("Form Data:", formData);
       const response = await axios.post(
-        "http://localhost:4000/api/user/resetpassword",
+        "https://bookstore-backend-y3ks.onrender.com/api/user/resetpassword",
         formData
       );
 

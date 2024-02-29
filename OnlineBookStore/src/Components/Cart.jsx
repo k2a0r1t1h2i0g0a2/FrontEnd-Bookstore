@@ -24,11 +24,14 @@ const Cart = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:5000/api/cart/get", {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      const response = await axios.get(
+        "https://bookstore-backend-y3ks.onrender.com/api/cart/get",
+        {
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
       //console.log("response cart data", response.data.carts);
       setCart(response.data.carts);
 
@@ -51,7 +54,7 @@ const Cart = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/api/cart/add/book",
+        "https://bookstore-backend-y3ks.onrender.com/api/cart/add/book",
         {
           bookId: id,
           quantity: newQuantity,
@@ -78,7 +81,7 @@ const Cart = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/api/cart/remove",
+        "https://bookstore-backend-y3ks.onrender.com/api/cart/remove",
         {
           bookId: bookId,
         },
@@ -112,8 +115,8 @@ const Cart = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/api/payment/checkout",
-      {price},
+        "https://bookstore-backend-y3ks.onrender.com/api/payment/checkout",
+        { price },
         {
           headers: {
             "x-auth-token": token,
@@ -180,8 +183,8 @@ const handlePayButtonClick = (bookTotalPrice) => {
         return;
       }
       const response = await axios.post(
-        "http://localhost:5000/api/payment/verification",
-       paymentDetails,
+        "https://bookstore-backend-y3ks.onrender.com/api/payment/verification",
+        paymentDetails,
         {
           headers: {
             "x-auth-token": token,

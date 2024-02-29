@@ -63,11 +63,14 @@ const Bookdetail = () => {
         if (!token) {
           console.log("Authentication token is missing!");
         }
-        const response = await axios.get("http://localhost:5000/api/book/get", {
-          headers: {
-            "x-auth-token": token,
-          },
-        });
+        const response = await axios.get(
+          "https://bookstore-backend-y3ks.onrender.com/api/book/get",
+          {
+            headers: {
+              "x-auth-token": token,
+            },
+          }
+        );
         setBooks(response.data.books);
 
         setLoading(false);
@@ -91,7 +94,7 @@ const Bookdetail = () => {
          console.log("Authentication token is missing!");
        }
      const response = await axios.post(
-       "http://localhost:5000/api/cart/add/book",
+       "https://bookstore-backend-y3ks.onrender.com/api/cart/add/book",
        {
          bookId: id,
          quantity: quantity,
