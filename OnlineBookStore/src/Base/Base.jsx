@@ -37,11 +37,14 @@ useEffect(() => {
         return;
       }
 
-      const response = await axios.get("http://localhost:5000/api/cart/get", {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      const response = await axios.get(
+        "https://bookstore-backend-y3ks.onrender.com/api/cart/get",
+        {
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
       const cartItems = response.data.carts.reduce(
         (total, cartItem) => total + cartItem.items.length,
         0
