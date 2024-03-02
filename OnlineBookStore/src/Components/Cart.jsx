@@ -125,7 +125,7 @@ const Cart = () => {
       );
       const { data } = response;
       setPaymentId(data.id);
-
+   
       const options = {
         key: "rzp_test_IB8d49Vzjim5AP",
         amount:price*100,
@@ -154,7 +154,8 @@ const Cart = () => {
   };
 const handlePayButtonClick = (bookTotalPrice) => {
   handlePayment(bookTotalPrice);
-};
+  };
+  
   const handlePaymentSuccess = async (response) => {
     
     try {
@@ -165,15 +166,13 @@ const handlePayButtonClick = (bookTotalPrice) => {
         razorpay_signature: response.razorpay_signature,
       };
       verifyPayment(paymentDetails);
-      //   await handleRemoveFromCart(bookId);
-      // fetchCart();
 
-       cart.forEach((cartItem) => {
-         cartItem.items.forEach((item) => {
-           handleRemoveFromCart(item.bookId._id);
-         });
-       });
-        fetchCart();
+    
+
+   
+     
+
+      
     } catch (error) {
         console.error("Error handling payment success:", error);
     }
@@ -199,7 +198,7 @@ const handlePayButtonClick = (bookTotalPrice) => {
         }
       );
       console.log("Payment verification response:", response.data);
-      // Handle payment verification response as needed
+   
     } catch (error) {
       console.log("verifying payment transaction");
     }
