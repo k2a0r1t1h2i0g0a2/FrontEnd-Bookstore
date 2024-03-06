@@ -91,7 +91,11 @@ const handleLogout = () => {
                 <Typography>
                   {" "}
                   <LocalLibraryIcon
-                    style={{ fontSize: "100px", color: "#572724" }}
+                    style={{
+                      fontSize: "100px",
+                      color: "#572724",
+                      margin: "20px",
+                    }}
                   />
                 </Typography>
                 <IconButton onClick={() => navigate("/home")}>
@@ -122,6 +126,7 @@ const handleLogout = () => {
           <h1 className="title">{title}</h1>
           <div>{children}</div>
         </main>
+
         <footer>
           <AppBar
             sx={{
@@ -130,45 +135,44 @@ const handleLogout = () => {
             position="relative"
           >
             <Toolbar variant="dense">
+              <Typography>
+                {" "}
+                <LocalLibraryIcon
+                  style={{ fontSize: "70px", color: "#f5f5f5" }}
+                />
+              </Typography>
               <Box
                 sx={{
                   display: "flex",
-                  flexWrap: "wrap",
                   justifyContent: "space-between",
-                  width: { xs: 0, sm: 600, md: 900, lg: 1200, xl: 1530 },
+                 
+                  maxWidth: "1530px", 
+                  margin: "0 auto", 
                 }}
               >
-                <Typography>
-                  {" "}
-                  <LocalLibraryIcon
-                    style={{ fontSize: "70px", color: "#f5f5f5" }}
-                  />
-                </Typography>
-                <IconButton sx={{ color: "#f5f5f5 ", fontSize: "medium" }}>
+                <Typography sx={{ color: "#f5f5f5 ", fontSize: "medium" }}>
                   © Copyright 2024.Powered By Book Store.All rights reserved.
-                </IconButton>{" "}
+                </Typography>
               </Box>
               <Box
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
-                  justifyContent: "flex-end",
-                  width: { xs: 0, sm: 600, md: 900, lg: 1200, xl: 1530 },
                 }}
               >
                 <IconButton
                   component={Link}
                   to={instagramLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <InstagramIcon />
-                </IconButton>
+                </IconButton>{" "}
                 <IconButton
                   component={Link}
                   to={WhatsAppLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <WhatsAppIcon />
                 </IconButton>
@@ -176,34 +180,31 @@ const handleLogout = () => {
                   component={Link}
                   to={youtubeLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <YouTubeIcon />
                 </IconButton>
-
                 <IconButton
                   component={Link}
                   to={emailLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <EmailIcon />
                 </IconButton>
-
                 <IconButton
                   component={Link}
                   to={facebookLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <FacebookIcon />
                 </IconButton>
-
                 <IconButton
                   component={Link}
                   to={TwitterLink}
                   target="_blank"
-                  sx={{ color: "#f5f5f5 " }}
+                  sx={{ color: "#f5f5f5 ", fontSize: "3vw" }}
                 >
                   <TwitterIcon />
                 </IconButton>

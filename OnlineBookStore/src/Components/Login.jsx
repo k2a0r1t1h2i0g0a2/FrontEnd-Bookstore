@@ -57,7 +57,7 @@ const navigate = useNavigate()
        navigate("/home");
       } catch (error) {
          console.error("Error occurred:", error);
-         setError("You password is incorrect!!");
+         setError("Your password is incorrect!!");
          setSuccessMessage("");
       }
     };
